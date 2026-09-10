@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Procurement Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>AI Procurement Assistant</h1>
+
+        <p>
+            SAP MM Procurement Analytics Dashboard
+        </p>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+
+        <div class="card">
+
+            <h3>Total Orders</h3>
+
+            <div
+                id="totalOrders"
+                class="number">
+
+                0
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Overdue Orders</h3>
+
+            <div
+                id="overdueOrders"
+                class="number">
+
+                0
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Value</h3>
+
+            <div
+                id="totalValue"
+                class="number">
+
+                ₹0
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>High Risk</h3>
+
+            <div
+                id="highRiskOrders"
+                class="number">
+
+                0
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- AI ASSISTANT -->
+
+    <section class="assistant">
+
+
+        <h2>Procurement Assistant</h2>
+
+        <p class="description">
+
+            Ask questions about purchase orders,
+            suppliers and procurement risks.
+
+        </p>
+
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Example: Which orders are overdue?"
+            >
+
+            <button
+                onclick="askAssistant()">
+
+                Ask
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="answer"
+            class="answer">
+
+            Ask a question to begin.
+
+        </div>
+
+
+    </section>
+
+
+    <!-- PURCHASE ORDERS -->
+
+    <section class="orders-section">
+
+
+        <div class="section-header">
+
+            <h2>Purchase Orders</h2>
+
+
+            <div>
+
+                <button
+                    onclick="loadOrders()">
+
+                    Load Orders
+
+                </button>
+
+
+                <button
+                    onclick="loadRiskAnalysis()">
+
+                    Analyze Risk
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="orders">
+
+            <p class="empty">
+                Click "Load Orders".
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+
+</body>
+
+</html>

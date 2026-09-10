@@ -1,0 +1,30 @@
+[
+    {
+        "po_id": "450001",
+        "supplier": "ABC Ltd",
+        "amount": 120000,
+        "delivery_date": "2026-09-01",
+        "status": "Overdue"
+    },
+    {
+        "po_id": "450002",
+        "supplier": "XYZ Ltd",
+        "amount": 85000,
+        "delivery_date": "2026-09-15",
+        "status": "Open"
+    },
+    {
+        "po_id": "450003",
+        "supplier": "Tech Solutions",
+        "amount": 250000,
+        "delivery_date": "2026-08-25",
+        "status": "Overdue"
+    },
+    {
+        "po_id": "450004",
+        "supplier": "Global Systems",
+        "amount": 180000,
+        "delivery_date": "2026-08-28",
+        "status": "Overdue"
+    }
+]
